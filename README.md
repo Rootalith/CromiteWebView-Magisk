@@ -190,7 +190,7 @@ THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. BY USING THIS S
 ## Support
 
 - Open issues on GitHub
-- Join discussion on XDA
+
 - Check release notes for updates
 
 ## Credits
