@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webviewproviders>
+    <webviewprovider 
+        packageName="com.android.webview" 
+        availableByDefault="true"
+        isFallback="false"/>  <!-- Blocks fallback to others -->
+</webviewproviders>
