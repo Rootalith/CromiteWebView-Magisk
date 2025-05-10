@@ -49,7 +49,7 @@ id=cromite-webview
 name=Cromite WebView
 version=v1.0.0
 versionCode=1
-author=Selven-1
+author=Rootalith
 description=Replaces system WebView with Cromite
 ```
 
