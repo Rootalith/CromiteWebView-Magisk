@@ -78,40 +78,39 @@ su -c "cmd webviewupdate get-current-webview-package"
 | ROM | Status | Notes |
 |-----|--------|-------|
 | Evolution X | ✅ Fully Working | Tested on v9.7 |
-| LineageOS | ✅ Working | Needs  |
+| LineageOS | ✅ Working | Needs GApps |
 | Pixel Experience | ✅ Working | - |
-
+| MIUI | ⚠️ Partial | Requires config changes |
+| AOSP | ✅ Working | Android 8.0+ |
 
 ## 🏗️ Technical Details
-## Module File Structure
-
-<pre>
-<span style="color:#569CD6">CromiteWebView-Magisk/</span>
+### Module File Structure
+```text
+CromiteWebView-Magisk/
 │
-├── <span style="color:#9CDCFE">META-INF/com/google/android/</span>
-│   ├── <span style="color:#D8D8D8">update-binary</span>
-│   └── <span style="color:#D8D8D8">updater-script</span>
+├── META-INF/com/google/android/
+│   ├── update-binary
+│   └── updater-script
 │
-├── <span style="color:#9CDCFE">system/</span>
-│   ├── <span style="color:#9CDCFE">etc/</span>
-│   │   ├── <span style="color:#9CDCFE">init/</span><span style="color:#D8D8D8">webview-zygote.rc</span>
-│   │   ├── <span style="color:#9CDCFE">permissions/</span><span style="color:#D8D8D8">webview.xml</span>
-│   │   ├── <span style="color:#9CDCFE">sysconfig/</span>
-│   │   │   ├── <span style="color:#D8D8D8">webview-config.xml</span>
-│   │   │   └── <span style="color:#D8D8D8">webview-hiddenapi-package-allowlist.xml</span>
-│   │   └── <span style="color:#9CDCFE">webview/</span><span style="color:#D8D8D8">providers.allowlist.xml</span>
+├── system/
+│   ├── etc/
+│   │   ├── init/webview-zygote.rc
+│   │   ├── permissions/webview.xml
+│   │   ├── sysconfig/
+│   │   │   ├── webview-config.xml
+│   │   │   └── webview-hiddenapi-package-allowlist.xml
+│   │   └── webview/providers.allowlist.xml
 │   │
-│   └── <span style="color:#9CDCFE">priv-app/WebViewGoogle/</span>
-│       └── <span style="color:#CE9178">CromiteWebView.apk</span>
+│   └── priv-app/WebViewGoogle/
+│       └── CromiteWebView.apk
 │
-├── <span style="color:#9CDCFE">common/</span>
-│   └── <span style="color:#D8D8D8">uninstall.sh</span>
+├── common/
+│   └── uninstall.sh
 │
-├── <span style="color:#D8D8D8">customize.sh</span>
-├── <span style="color:#D8D8D8">module.prop</span>
-├── <span style="color:#D8D8D8">post-fs-data.sh</span>
-└── <span style="color:#D8D8D8">zygote.sh</span>
-</pre>
+├── customize.sh
+├── module.prop
+├── post-fs-data.sh
+└── zygote.sh
 ```
 
 ### Key Components
