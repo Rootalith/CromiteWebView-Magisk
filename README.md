@@ -1,4 +1,5 @@
 # 🛡️ Cromite WebView Magisk Module
+[![Telegram](https://img.shields.io/badge/Telegram-Join_Channel-2CA5E0?style=flat-square&logo=telegram)](https://t.me/cromitewebview)
 
 ![GitHub License](https://img.shields.io/badge/license-Apache%202.0-blue)
 ![Android Version](https://img.shields.io/badge/Android-8.0%2B-brightgreen)
@@ -49,16 +50,20 @@ adb reboot recovery
 ### Method 3: Manual Installation (From Source)
 ```bash
 # 1. Clone repository
+[![Telegram](https://img.shields.io/badge/Telegram-Join_Channel-2CA5E0?style=flat-square&logo=telegram)](https://t.me/cromitewebview)
 git clone https://github.com/Rootalith/CromiteWebView-Magisk.git
 cd CromiteWebView-Magisk
 
 # 2. Build module (creates zip with proper structure)
+[![Telegram](https://img.shields.io/badge/Telegram-Join_Channel-2CA5E0?style=flat-square&logo=telegram)](https://t.me/cromitewebview)
 zip -r CromiteWebView-Magisk.zip * -x ".git*" -x "README.md"
 
 # 3. Install via Magisk
+[![Telegram](https://img.shields.io/badge/Telegram-Join_Channel-2CA5E0?style=flat-square&logo=telegram)](https://t.me/cromitewebview)
 su -c "magisk --install-module CromiteWebView-Magisk.zip"
 
 # 4. Or install manually
+[![Telegram](https://img.shields.io/badge/Telegram-Join_Channel-2CA5E0?style=flat-square&logo=telegram)](https://t.me/cromitewebview)
 unzip CromiteWebView-Magisk.zip -d /data/adb/modules/cromite_webview
 
 ```
@@ -67,6 +72,7 @@ unzip CromiteWebView-Magisk.zip -d /data/adb/modules/cromite_webview
 ```bash
 su -c "cmd webviewupdate get-current-webview-package"
 # Should return: com.android.webview
+[![Telegram](https://img.shields.io/badge/Telegram-Join_Channel-2CA5E0?style=flat-square&logo=telegram)](https://t.me/cromitewebview)
 ```
 
 ### Uninstallation
@@ -120,6 +126,7 @@ CromiteWebView-Magisk/
 ### Key Components
 ```properties
 # module.prop
+[![Telegram](https://img.shields.io/badge/Telegram-Join_Channel-2CA5E0?style=flat-square&logo=telegram)](https://t.me/cromitewebview)
 id=cromite-webview
 name=Cromite WebView
 version=v1.0
@@ -131,9 +138,11 @@ description=Privacy-enhanced WebView solution
 ## 🔍 Verification
 ```bash
 # Check active WebView
+[![Telegram](https://img.shields.io/badge/Telegram-Join_Channel-2CA5E0?style=flat-square&logo=telegram)](https://t.me/cromitewebview)
 su -c "cmd webviewupdate get-current-webview-package"
 
 # Verify version
+[![Telegram](https://img.shields.io/badge/Telegram-Join_Channel-2CA5E0?style=flat-square&logo=telegram)](https://t.me/cromitewebview)
 su -c "dumpsys package com.android.webview | grep versionName"
 ```
 
@@ -170,3 +179,5 @@ Copyright 2024 Rootalith
 Licensed under the Apache License, Version 2.0
 You may not use this file except in compliance with the License.
 ```
+## 💬 Support
+[![Telegram](https://img.shields.io/badge/Official-Telegram_Channel-2CA5E0?style=flat-square&logo=telegram)](https://t.me/cromitewebview)
