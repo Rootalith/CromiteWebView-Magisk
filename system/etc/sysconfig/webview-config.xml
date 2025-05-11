@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <!-- Force Cromite as default and block competitors -->
+    <webview-provider 
+        package="com.android.webview" 
+        default="true"
+        availableByDefault="true"
+        description="Cromite WebView" />
+    
+    <!-- Explicitly disable other providers -->
+    <webview-provider package="com.google.android.webview" default="false" availableByDefault="false" />
+    <webview-provider package="com.android.chrome" default="false" availableByDefault="false" />
+</config>

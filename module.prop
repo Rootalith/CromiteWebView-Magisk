@@ -1,0 +1,7 @@
+id=cromite_webview
+name=Cromite System WebView
+version=v1.0.0
+versionCode=1
+author=Rootalith
+description=Replaces system WebView with Cromite WebView
+updateJson=https://raw.githubusercontent.com/Rootalith/cromite_webview/main/update.json
