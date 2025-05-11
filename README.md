@@ -27,7 +27,6 @@
 | **Systemless** | No system partition modifications |
 | **Auto-Recovery** | Fallback to stock WebView if issues occur |
 | **Dual Root** | Supports Magisk & KernelSU |
-| **Update Safe** | Survives OTA updates |
 
 ## ⚙️ Installation
 
