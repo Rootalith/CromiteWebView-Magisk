@@ -30,19 +30,48 @@
 | **Update Safe** | Survives OTA updates |
 
 ## ⚙️ Installation
-### Via Magisk Manager
-```bash
-1. Download latest release
-2. Open Magisk/KernelSU app
-3. Install from storage
-4. Reboot device
-```
 
-### ADB Method
+
+### Method 1: Magisk/KernelSU (Recommended)
+1. Download the latest release from [Releases](https://github.com/Rootalith/CromiteWebView-Magisk/releases)
+2. Open Magisk/KernelSU app
+3. Tap **Install → Install from storage**
+4. Select the downloaded zip
+5. Reboot your device
+
+### Method 2: Manual Installation (Recovery)
 ```bash
 adb push CromiteWebView-Magisk.zip /sdcard/
-adb shell su -c "magisk --install-module /sdcard/CromiteWebView-Magisk.zip"
-adb reboot
+adb reboot recovery
+```
+- In recovery:  
+  `Install → Select zip → Swipe to confirm`
+
+### Method 3: Manual Installation (Termux)
+```bash
+# Download module
+wget https://github.com/Rootalith/CromiteWebView-Magisk/releases/download/v1.0/CromiteWebView-Magisk.zip
+
+# Install via Magisk
+su -c "magisk --install-module /path/to/CromiteWebView-Magisk.zip"
+
+# Or manually extract
+unzip CromiteWebView-Magisk.zip -d /data/adb/modules/cromite_webview
+```
+
+### Post-Install Verification
+```bash
+su -c "cmd webviewupdate get-current-webview-package"
+# Should return: com.android.webview
+```
+
+### Uninstallation
+1. Remove via Magisk/KernelSU app  
+   **OR**  
+2. Run:  
+   ```bash
+   su -c "rm -rf /data/adb/modules/cromite_webview
+   
 ```
 
 ## 📊 ROM Compatibility
