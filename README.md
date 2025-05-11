@@ -47,16 +47,21 @@ adb reboot recovery
 - In recovery:  
   `Install → Select zip → Swipe to confirm`
 
-### Method 3: Manual Installation (Termux)
+### Method 3: Manual Installation (From Source)
 ```bash
-# Download module
-wget https://github.com/Rootalith/CromiteWebView-Magisk/releases/download/v1.0/CromiteWebView-Magisk.zip
+# 1. Clone repository
+git clone https://github.com/Rootalith/CromiteWebView-Magisk.git
+cd CromiteWebView-Magisk
 
-# Install via Magisk
-su -c "magisk --install-module /path/to/CromiteWebView-Magisk.zip"
+# 2. Build module (creates zip with proper structure)
+zip -r CromiteWebView-Magisk.zip * -x ".git*" -x "README.md"
 
-# Or manually extract
+# 3. Install via Magisk
+su -c "magisk --install-module CromiteWebView-Magisk.zip"
+
+# 4. Or install manually
 unzip CromiteWebView-Magisk.zip -d /data/adb/modules/cromite_webview
+
 ```
 
 ### Post-Install Verification
