@@ -82,3 +82,11 @@ check_device_compatibility() {
 check_device_compatibility
 on_install
 set_permissions
+# SDK Version Check
+MIN_SDK=26
+CURRENT_SDK=$(getprop ro.build.version.sdk)
+
+if [ "$CURRENT_SDK" -lt "$MIN_SDK" ]; then
+  ui_print "! Android 8.0 (SDK 26) required"
+  abort
+fi

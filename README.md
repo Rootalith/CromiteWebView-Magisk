@@ -84,6 +84,12 @@ su -c "cmd webviewupdate get-current-webview-package"
    
 ```
 
+## 📋 System Requirements
+- **Minimum Android**: 8.0 (API 26)
+- **Target SDK**: 35
+- **WebView Package**: `com.android.webview`
+- **Compiled Against**: Android 16 (SDK 36)
+
 ## 📊 ROM Compatibility
 | ROM | Status | Notes |
 |-----|--------|-------|
