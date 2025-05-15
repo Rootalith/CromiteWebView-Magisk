@@ -1,12 +1,12 @@
 # 🛡️ Cromite WebView Magisk Module
-[![Telegram](https://img.shields.io/badge/Telegram-Join_Channel-2CA5E0?style=flat-square&logo=telegram)](https://t.me/cromitewebview)
 
-![GitHub License](https://img.shields.io/badge/license-Apache%202.0-blue)
-![Android Version](https://img.shields.io/badge/Android-8.0%2B-brightgreen)
-![Magisk Version](https://img.shields.io/badge/Magisk-20.4%2B-orange)
-![KernelSU Support](https://img.shields.io/badge/KernelSU-Compatible-success)
+[![Telegram Channel](https://img.shields.io/badge/Telegram-Join_Channel-2CA5E0?style=for-the-badge&logo=telegram)](https://t.me/cromitewebview)
+![License](https://img.shields.io/badge/license-Apache%202.0-blue?style=for-the-badge)
+![Android](https://img.shields.io/badge/Android-8.0%2B-brightgreen?style=for-the-badge)
+![Magisk](https://img.shields.io/badge/Magisk-20.4%2B-orange?style=for-the-badge)
+![KernelSU](https://img.shields.io/badge/KernelSU-Compatible-success?style=for-the-badge)
 
-
+```text
   ____                     _ _     __        __   _  __     ___               
  / ___|___  _ __ _ __ ___ (_) |_ __\ \      / /__| |_\ \   / (_) _____      __
 | |   / _ \| '__| '_ ` _ \| | __/ _ \ \ /\ / / _ \ '_ \ \ / /| |/ _ \ \ /\ / /
@@ -19,188 +19,104 @@
 | |  | | (_| | (_| | \__ \   <  | |  | | (_) | (_| | |_| | |  __/
 |_|  |_|\__,_|\__, |_|___/_|\_\ |_|  |_|\___/ \__,_|\__,_|_|\___|
               |___/                                              
-
-
-
+```
 
 > The ultimate privacy-focused WebView solution for rooted Android devices
 
-
-
-## 🌟 Why Cromite Over Stock WebView?
-| Feature | Stock WebView | Cromite WebView |
-|---------|--------------|-----------------|
-| **Privacy Protection** | Basic | Advanced tracking protection |
-| **Ad Blocking** | None | Built-in ad blocker |
-| **HTTPS Upgrades** | Limited | Forces HTTPS where possible |
-| **Script Control** | Minimal | Granular script blocking |
-| **Fingerprinting** | Vulnerable | Anti-fingerprinting measures |
-| **Update Frequency** | Monthly | Weekly security updates |
-
-
-## 📦 Features
-| Feature | Description |
-|---------|-------------|
-| **Privacy First** | Built on Chromium with enhanced protections |
-| **Systemless** | No system partition modifications |
-| **Auto-Recovery** | Fallback to stock WebView if issues occur |
-| **Dual Root** | Supports Magisk & KernelSU |
+## 🌟 Key Features
+| Privacy Features | Technical Features |
+|-----------------|-------------------|
+| ✅ Built-in ad/tracker blocking | ✅ Systemless installation |
+| ✅ HTTPS enforcement | ✅ Auto-recovery fallback |
+| ✅ Anti-fingerprinting | ✅ Dual root support |
+| ✅ Script control | ✅ Weekly security updates |
 
 ## ⚙️ Installation
+### Recommended Method (Magisk/KernelSU):
+1. Download from [Releases](https://github.com/Rootalith/CromiteWebView-Magisk/releases)
+2. Install via your root manager app
+3. Reboot device
 
+### Alternative Methods:
+<details>
+<summary><b>Recovery Mode</b></summary>
 
-### Method 1: Magisk/KernelSU (Recommended)
-1. Download the latest release from [Releases](https://github.com/Rootalith/CromiteWebView-Magisk/releases)
-2. Open Magisk/KernelSU app
-3. Tap **Install → Install from storage**
-4. Select the downloaded zip
-5. Reboot your device
-
-### Method 2: Manual Installation (Recovery)
 ```bash
 adb push CromiteWebView-Magisk.zip /sdcard/
 adb reboot recovery
 ```
-- In recovery:  
-  `Install → Select zip → Swipe to confirm`
+Then flash via recovery menu.
+</details>
 
-### Method 3: Manual Installation (From Source)
+<details>
+<summary><b>Manual Build from Source</b></summary>
+
 ```bash
-# 1. Clone repository
-[![Telegram](https://img.shields.io/badge/Telegram-Join_Channel-2CA5E0?style=flat-square&logo=telegram)](https://t.me/cromitewebview)
 git clone https://github.com/Rootalith/CromiteWebView-Magisk.git
 cd CromiteWebView-Magisk
-
-# 2. Build module (creates zip with proper structure)
-[![Telegram](https://img.shields.io/badge/Telegram-Join_Channel-2CA5E0?style=flat-square&logo=telegram)](https://t.me/cromitewebview)
-zip -r CromiteWebView-Magisk.zip * -x ".git*" -x "README.md"
-
-# 3. Install via Magisk
-[![Telegram](https://img.shields.io/badge/Telegram-Join_Channel-2CA5E0?style=flat-square&logo=telegram)](https://t.me/cromitewebview)
+zip -r CromiteWebView-Magisk.zip * -x ".git*" "README.md"
 su -c "magisk --install-module CromiteWebView-Magisk.zip"
-
-# 4. Or install manually
-[![Telegram](https://img.shields.io/badge/Telegram-Join_Channel-2CA5E0?style=flat-square&logo=telegram)](https://t.me/cromitewebview)
-unzip CromiteWebView-Magisk.zip -d /data/adb/modules/cromite_webview
-
 ```
+</details>
 
-### Post-Install Verification
-```bash
-su -c "cmd webviewupdate get-current-webview-package"
-# Should return: com.android.webview
-[![Telegram](https://img.shields.io/badge/Telegram-Join_Channel-2CA5E0?style=flat-square&logo=telegram)](https://t.me/cromitewebview)
-```
+## 📜 License Compliance
+- **Module Code**: Apache-2.0
+- **Bundled Cromite**: GPL-3.0
+- Complete licensing details in:
+  - [`NOTICE`](NOTICE) 
+  - [`3rd-party-licenses/`](3rd-party-licenses/)
 
-### Uninstallation
-1. Remove via Magisk/KernelSU app  
-   **OR**  
-2. Run:  
-   ```bash
-   su -c "rm -rf /data/adb/modules/cromite_webview
-   
-```
-
-## 📋 System Requirements
-- **Minimum Android**: 8.0 (API 26)
-- **Target SDK**: 35
-- **WebView Package**: `com.android.webview`
-- **Compiled Against**: Android 16 (SDK 36)
-
-## 📊 ROM Compatibility
+## 📊 Compatibility Matrix
 | ROM | Status | Notes |
 |-----|--------|-------|
-| Evolution X | ✅ Fully Working | Tested on v9.7 |
-| LineageOS | ✅ Working | Needs GApps |
-| Pixel Experience | ✅ Working | - |
-| MIUI | ⚠️ Partial | Requires config changes |
-| AOSP | ✅ Working | Android 8.0+ |
+| Evolution X | ✅ Full support | Tested v9.7+ |
+| LineageOS | ✅ Works | ✅ Works |
+| DrepFest | ✅ Works |  Tested 15.1 |
+| MIUI | ⚠️ Not Tested | Not Tested |
+| Stock AOSP | ✅ Full support | Android 8.0+ |
 
-## 🏗️ Technical Details
-### Module File Structure
+## 🏗️ Module Structure
+<details>
+<summary><b>Click to view file structure</b></summary>
+
 ```text
 CromiteWebView-Magisk/
-│
 ├── META-INF/com/google/android/
 │   ├── update-binary
 │   └── updater-script
-│
 ├── system/
-│   ├── etc/
-│   │   ├── init/webview-zygote.rc
-│   │   ├── permissions/webview.xml
-│   │   ├── sysconfig/
-│   │   │   ├── webview-config.xml
-│   │   │   └── webview-hiddenapi-package-allowlist.xml
-│   │   └── webview/providers.allowlist.xml
-│   │
 │   └── priv-app/WebViewGoogle/
-│       └── CromiteWebView.apk
-│
-├── common/
-│   └── uninstall.sh
-│
-├── customize.sh
-├── module.prop
-├── post-fs-data.sh
-└── zygote.sh
+│       └── CromiteWebView.apk  # GPL-3.0
+├── module.prop                # Apache-2.0
+└── [other support files]
 ```
+</details>
 
-### Key Components
-```properties
-# module.prop
-[![Telegram](https://img.shields.io/badge/Telegram-Join_Channel-2CA5E0?style=flat-square&logo=telegram)](https://t.me/cromitewebview)
-id=cromite-webview
-name=Cromite WebView
-version=v1.0
-versionCode=1
-author=Rootalith
-description=Privacy-enhanced WebView solution
-```
-
-## 🔍 Verification
+## 🔍 Post-Install Verification
 ```bash
-# Check active WebView
-[![Telegram](https://img.shields.io/badge/Telegram-Join_Channel-2CA5E0?style=flat-square&logo=telegram)](https://t.me/cromitewebview)
+# Verify active WebView
 su -c "cmd webviewupdate get-current-webview-package"
 
-# Verify version
-[![Telegram](https://img.shields.io/badge/Telegram-Join_Channel-2CA5E0?style=flat-square&logo=telegram)](https://t.me/cromitewebview)
+# Check version
 su -c "dumpsys package com.android.webview | grep versionName"
 ```
 
-## 🚨 Troubleshooting
-| Issue | Solution |
-|-------|----------|
-| WebView not switching | `su -c "pm disable com.google.android.webview"` |
+## 🚨 Troubleshooting Guide
+| Symptom | Solution |
+|---------|----------|
+| WebView not switching | Run: `su -c "pm disable com.google.android.webview"` |
 | App crashes | Clear WebView data in Settings > Apps |
 | Installation fails | Check `/data/adb/magisk_debug.log` |
 
+## 📜 Version History
+| Version | Highlights |
+|---------|------------|
+| v1.0 | Initial release with Cromite 135.0.7049.58 |
 
+## ⚠️ Important Notice
+> This module modifies core system components.  
+> **Always backup your data before installation.**
 
-## 📜 Changelog
-### v1.0
-- Initial release
-- Cromite 135.0.7049.58
-- Full Magisk/KernelSU support
-- Tested on Evolution X, LineageOS, AOSP
-
-## ⚠️ Disclaimer
-> **Warning**  
-> This module modifies system components.  
-> Backup your data before installation.
-
-## 🌟 Credits
-- [Cromite Project](https://github.com/uazo/cromite)
-- [Magisk](https://github.com/topjohnwu/Magisk) by topjohnwu
-- [KernelSU](https://github.com/tiann/KernelSU) Team
-
-## 📄 License
-```text
-Copyright 2024 Rootalith
-
-Licensed under the Apache License, Version 2.0
-You may not use this file except in compliance with the License.
+[➡️ Full Documentation](https://github.com/Rootalith/CromiteWebView-Magisk/wiki) | 
+[📢 Support Channel](https://t.me/cromitewebview)
 ```
-## 💬 Support
-[![Telegram](https://img.shields.io/badge/Official-Telegram_Channel-2CA5E0?style=flat-square&logo=telegram)](https://t.me/cromitewebview)
