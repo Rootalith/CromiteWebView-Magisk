@@ -1,0 +1,5 @@
+service webview-zygote /system/bin/sh /data/adb/modules/cromite_webview/zygote.sh
+    class main
+    user root
+    group root
+    oneshot

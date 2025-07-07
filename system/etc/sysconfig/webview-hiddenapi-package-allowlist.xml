@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <allow-in-power-save package="com.android.webview"/>
+    <allow-in-data-usage-save package="com.android.webview"/>
+</config>
